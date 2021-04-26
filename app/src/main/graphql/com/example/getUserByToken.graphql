@@ -1,0 +1,17 @@
+query CustomertByToken($accessToken: String!){
+    customer (customerAccessToken :  $accessToken) {
+        id
+        firstName
+        lastName
+        phone
+        email
+        defaultAddress {
+            address1
+            city
+            province
+            zip
+            country
+            company
+        }
+    }
+}

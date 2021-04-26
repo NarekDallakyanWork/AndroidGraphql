@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#001A44</color>
+    <color name="status_bar">#0F000000</color>
+    <color name="dark_blue">#001A44</color>
+    <color name="light_blue">#4979C5</color>
+    <color name="gray">#C8D4D9</color>
+    <color name="light_gray">#69767B</color>
+    <color name="dark_gray">#69767B</color>
+    <color name="red">#FF1F00</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="majenta">#FF1F00</color>
+    <color name="message_color">#69767B</color>
+    <color name="recycler_gray_bg">#F5F7FA</color>
+    <color name="recycler_dark_gray_bg">#F0F3F8</color>
+    <color name="tab_bar_icon_inactive">#69767B</color>
+    <color name="tab_bar_icon_active">#000000</color>
+    <color name="quantity_dialog_bg">#FA69767B</color>
+    <color name="quantity_dialog_minus">#ccd1da</color>
+    <color name="basket_quantity">#69767B</color>
+    <color name="basket_line">#E6EDF0</color>
+    <color name="profile_line">#F5F7FA</color>
+    <color name="basket_free_delivery_bg">#009F23</color>
+    <color name="process_order_color">#E669767B</color>
+    <color name="green">#1BD741</color>
+</resources>

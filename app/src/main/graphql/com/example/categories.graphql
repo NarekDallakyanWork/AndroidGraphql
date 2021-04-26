@@ -1,0 +1,15 @@
+query CategoriesQuery{
+    collections(first:250) {
+        edges {
+            node {
+                id
+                title
+                handle
+                image {
+                    id
+                    originalSrc
+                }
+            }
+        }
+    }
+}

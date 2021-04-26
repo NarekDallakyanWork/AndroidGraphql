@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basketItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/basketItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_marginStart="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@android:color/transparent">
+
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/basketImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/basketTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/intermedium"
+                    android:maxLines="2"
+                    android:text="Product title"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/size_14" />
+
+
+                <TextView
+                    android:id="@+id/basketDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/interregular"
+                    android:maxLines="2"
+                    android:text="Pack of 1200"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quantityPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.8"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/basketQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="2.2"
+                android:fontFamily="@font/interregular"
+                android:gravity="center_horizontal"
+                android:text="50"
+                android:textColor="@color/basket_quantity"
+                android:textSize="@dimen/size_12"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/basketPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/interregular"
+                android:gravity="end"
+                android:text="RS. 150.000"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/size_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

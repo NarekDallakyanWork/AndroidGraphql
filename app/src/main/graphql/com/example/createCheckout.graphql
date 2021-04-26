@@ -1,0 +1,35 @@
+mutation CreateCheckout($variantId: ID!, $quantity: Int!){
+    checkoutCreate(input: {
+        lineItems: [{ variantId: $variantId, quantity: $quantity}]
+    }) {
+        checkout {
+            id
+            webUrl
+            lineItems(first: 250) {
+                edges {
+                    node {
+                        title
+                        quantity
+                        variant {
+                            id
+                            availableForSale
+                            sku
+                            title
+                            weight
+                            weightUnit
+                            selectedOptions {
+                                name
+                                value
+                            }
+                            image {
+                                id
+                                altText
+                                originalSrc
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

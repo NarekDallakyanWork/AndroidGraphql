@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_5">5sp</dimen>
+    <dimen name="size_8">8sp</dimen>
+    <dimen name="size_10">10sp</dimen>
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_17">17sp</dimen>
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="size_19">19sp</dimen>
+    <dimen name="size_20">20sp</dimen>
+    <dimen name="logo_name_size">200sp</dimen>
+    <dimen name="filtersWidth">300dp</dimen>
+    <dimen name="filtersHeight">436dp</dimen>
+</resources>

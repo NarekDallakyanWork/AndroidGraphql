@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: 'dependencies.gradle'
+apply plugin: 'com.apollographql.apollo'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'hajoxhajox'
+            storeFile file('keytool')
+            storePassword 'barevbarev'
+        }
+    }
+    compileSdkVersion compileVersion
+    buildToolsVersion buildToolsVersion
+    defaultConfig {
+        applicationId applicationId
+        minSdkVersion minVersion
+        targetSdkVersion targetVersion
+        versionCode 10
+        versionName "1.0.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = javaSourceCompatibility
+        targetCompatibility = javaTargetCompatibility
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    apollo {
+        generateKotlinModels.set(false)
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // JetPack
+    implementation lifecycleDependency.values()
+    implementation viewModelDependency.values()
+    implementation pagingDependency.values()
+    implementation navigationDependency.values()
+    // Coroutines
+    implementation coroutinesDependency.values()
+    // Coil
+    implementation coilDependency.values()
+
+
+    // gif
+    implementation "io.coil-kt:coil-gif:0.9.5"
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+
+    // Material design
+    implementation materialDependency.values()
+    // Retrofit
+    implementation retrofitDependency.values()
+
+    // Android x fragment
+    // Kotlin
+    implementation "androidx.fragment:fragment-ktx:1.2.2"
+
+    implementation 'com.android.support:design:28.0.0'
+
+    // round image view
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+
+    implementation "com.apollographql.apollo:apollo-runtime:1.3.3"
+    implementation group: 'com.apollographql.apollo', name: 'apollo-http-cache', version: '1.3.3'
+    // If not already on your classpath, you might need the jetbrains annotations
+    compileOnly("org.jetbrains:annotations:13.0")
+    testCompileOnly("org.jetbrains:annotations:13.0")
+
+    implementation "com.squareup.okhttp3:logging-interceptor:4.4.0"
+
+    implementation 'com.android.support:support-annotations:28.0.0'
+
+    implementation group: 'com.itude.mobile.android.util', name: 'android-util-lib', version: '2.0.0'
+
+}

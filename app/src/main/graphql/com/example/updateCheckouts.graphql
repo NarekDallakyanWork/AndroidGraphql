@@ -1,0 +1,33 @@
+mutation UpdateCheckoutForID($id: ID!, $lineItems: [CheckoutLineItemInput!]!) {
+    checkoutLineItemsReplace(lineItems: $lineItems, checkoutId: $id) {
+        checkout {
+            id
+            webUrl
+            lineItems(first: 250) {
+                edges {
+                    node {
+                        id
+                        title
+                        quantity
+
+                        variant {
+                            id
+                            availableForSale
+                            title
+                            weight
+                            selectedOptions {
+                                name
+                                value
+                            }
+                            image {
+                                id
+                                altText
+                                originalSrc
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

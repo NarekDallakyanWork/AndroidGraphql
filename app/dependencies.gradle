@@ -1,0 +1,61 @@
+ext {
+
+    // versions
+    minVersion = 21
+    compileVersion = 29
+    targetVersion = 29
+    versionCode = 10
+    versionName = "1.0.9"
+    buildToolsVersion = "29.0.2"
+
+    // application id
+    applicationId = "bazaar.tech.com"
+
+    // java version
+    javaSourceCompatibility = 1.8
+    javaTargetCompatibility = 1.8
+
+    def coilVersion = '0.9.1'
+    def lifecycleVersion = '2.1.0'
+    def viewModelVersion = '2.2.0-rc03'
+    def pagingVersion = '1.0.1'
+    def coroutinesVersion = '1.3.3'
+    def navigationVersion = "2.1.0"
+    def materialVersion = "1.1.0-alpha07"
+    def retrofitVersion = '2.6.0'
+
+    lifecycleDependency = [
+            lifecycle: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    ]
+
+    viewModelDependency = [
+            viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelVersion"
+    ]
+
+    pagingDependency = [
+            paging: "android.arch.paging:runtime:$pagingVersion"
+    ]
+
+    coroutinesDependency = [
+            coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    ]
+
+    coilDependency = [
+            coil: "io.coil-kt:coil:$coilVersion"
+    ]
+
+    navigationDependency = [
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+            navigationUiKit   : "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    ]
+
+    materialDependency = [
+            material: "com.google.android.material:material:$materialVersion"
+    ]
+
+    retrofitDependency = [
+            retrofit                    : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitGsonConverterFactory: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+    ]
+}

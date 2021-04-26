@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Bazaar</string>
+
+    <!-- Tab bar-->
+    <string name="tab_bar_home">Item list</string>
+    <string name="tab_bar_basket">Order list</string>
+    <string name="tab_bar_profile">Account</string>
+    <!--Login screen-->
+    <string name="login_description">Login karein, aur asaani se samaan order karein</string>
+    <string name="login_phone_hint">EMAIL</string>
+    <string name="login_password_hint">PASSWORD</string>
+    <string name="login_text">LOG IN</string>
+    <string name="login_phone_error">Durust email enter karain</string>
+    <string name="login_password_error">Durust password enter karein</string>
+    <string name="login_failure_message">Connection mai rukaawat hai, dubaara koshish karein</string>
+    <string name="login_failure_not_found_message">Email ya password durust nahi. Dobara koshish karien.</string>
+    <!--Categories-->
+    <string name="categories_title">Item list</string>
+    <string name="category_failure_message">Connection mai rukaawat hai, dubaara koshish karein</string>
+    <!--Product by category-->
+    <string name="product_by_category_failure_message">Unable to load subcategory, please try again later…</string>
+    <!--Sub product-->
+    <string name="sub_product_failure_message">Unable to process order at this point, please try again later…</string>
+    <string name="sub_product_empty_message">Buhat jald naye item add kiye jaaeinge</string>
+    <string name="currency">Rs.</string>
+    <string name="sub_product_add_to_basket_message">Order list update kardi gayi hai</string>
+    <string name="sub_product_removed_from_basket_message">Order list update kardi gayi hai</string>
+    <!--Basket-->
+    <string name="basket_title">Order list</string>
+    <string name="basket_error_message">Connection mai rukaawat hai, dubaara koshish karein</string>
+    <string name="basket_quantity_title">QTY</string>
+    <string name="basket_price_title">PRICE</string>
+    <string name="basket_free_delivery_title">Muft delivery!</string>
+    <string name="basket_order_total_title">Total bill</string>
+    <string name="basket_order_abc_title">par deliver kiya jaaye ga</string>
+    <string name="basket_total_price">PKR</string>
+    <string name="basket_process_order">ORDER CONFIRM KAREIN</string>
+    <string name="add_to_basket_message">Order list update kardi gayi hai</string>
+    <string name="basket_process_order_loader">Order confirm kiya jaa raha hai</string>
+    <string name="create_order_error_message">Connection mai rukaawat hai, dubaara koshish karein</string>
+    <string name="basket_empty_title">Order list khaali hai, samaan order karne ke liye item list per jaayein</string>
+    <string name="basket_empty_button_text">BROWSE ITEMS</string>
+    <!--Profile-->
+    <string name="profile_title">Profile</string>
+    <string name="profile_help">WHATSAPP KAREIN</string>
+    <string name="profile_log_out">Log out</string>
+    <string name="profile_log_out_button_text">LOGOUT</string>
+    <string name="dialog_message">Bazaar app se log out karna chaahtay \n hain?</string>
+    <string name="dialog_go_back" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="profile_whats_app_not_installed">Apnay phone mai whatsapp install karein</string>
+
+    <!--Quantity dialog-->
+    <string name="quantity_dialog_title">Miqdaar</string>
+    <string name="quantity_dialog_text">Quantity</string>
+    <string name="quantity_dialog_button_text">CONFIRM</string>
+    <string name="quantity_dialog_btn_text">CONFIRM QUANTITY</string>
+    <string name="quantity_dialog_unit_text">unit</string>
+    <string name="quantity_dialog_button_remove_text">ITEM NAHI CHAHIYE</string>
+    <string name="quantity_total_value">Rs. %1$s</string>
+
+    <!--Order Received-->
+    <string name="order_received_title">Order confirm ho gaya hai</string>
+    <string name="order_received_sub_title">Shukriya, aapka order tayaar kiya jaa raha hai</string>
+    <string name="order_received_back_btn_name">NAYA ORDER BANAEN</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

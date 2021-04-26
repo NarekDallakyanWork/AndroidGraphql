@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/quantityDialogRoot"
+    android:layout_height="match_parent"
+    android:background="@color/quantity_dialog_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/white"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <com.joooonho.SelectableRoundedImageView
+                        android:id="@+id/quantityImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:sriv_left_top_corner_radius="16dp"
+                        app:sriv_right_top_corner_radius="16dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quantityTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/playfairdisplaybold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/quantity_dialog_title"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="35dp"
+                        tools:ignore="SpUsage" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/quantityTitle"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/quantityValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/intersemibold"
+                            android:gravity="center_horizontal"
+                            android:text="1"
+                            android:textColor="@color/dark_blue"
+                            android:textSize="35dp"
+                            tools:ignore="SpUsage" />
+
+                        <LinearLayout
+                            android:id="@+id/quantityPlusMinusLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/quantityValue"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/minusLayout"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/quantity_oval_icon">
+
+                                <ImageView
+                                    android:id="@+id/minusIcon"
+                                    android:layout_width="8dp"
+                                    android:layout_height="2dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:scaleType="center"
+                                    android:src="@drawable/quantity_minus_icon" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/plusLayout"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="15dp"
+                                android:background="@drawable/quantity_oval_icon">
+
+                                <ImageView
+
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/quantity_plus" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/quantityDialogButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="24dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/corner_black_layout"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/quantityDialogButtonText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/intermedium"
+                                android:text="@string/quantity_dialog_button_text"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/size_15" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/quantityProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+</RelativeLayout>

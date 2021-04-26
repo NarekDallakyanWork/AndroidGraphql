@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:tag="MESSAGE"
+    android:id="@+id/messageRoot"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cornerLayout"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/corner_radius10_message_layout"
+        android:minHeight="48dp">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/alertMessage"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_17" />
+
+    </LinearLayout>
+</RelativeLayout>

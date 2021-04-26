@@ -1,0 +1,33 @@
+query CheckoutLastList($accessToken: String!){
+    customer (customerAccessToken : $accessToken) {
+        lastIncompleteCheckout {
+            id
+            lineItems(first: 250) {
+                edges {
+                    node {
+                        id
+                        title
+                        quantity
+
+                        variant {
+                            id
+                            availableForSale
+                            weight
+                            weightUnit
+                            selectedOptions {
+                                name
+                                value
+                            }
+                            image {
+                                id
+                                altText
+                                originalSrc
+                            }
+                            price
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

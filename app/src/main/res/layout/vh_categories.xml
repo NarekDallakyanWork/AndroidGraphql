@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:id="@+id/categoryRootItem"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/categoryItem"
+        android:layout_margin="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_marginStart="6dp"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/categoriesImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/categoriesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="@dimen/size_16"
+            android:fontFamily="@font/intermedium"
+            android:text="efvfvfrvv"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

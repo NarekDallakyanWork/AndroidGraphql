@@ -1,0 +1,39 @@
+query ProductByCollectionHandle($handle: String!, $first: Int!, $after: String!){
+    shop {
+        collectionByHandle(handle: $handle) {
+            products(first: $first, after: $after) {
+                edges {
+                    cursor
+                    node {
+                        id
+                        title
+                        description
+                        tags
+                        options {
+                            name
+                            values
+                        }
+                        images(first:1){
+                            edges{
+                                node{
+                                    id
+                                    altText
+                                    originalSrc
+                                }
+                            }
+                        }
+                        variants(first : 250) {
+                            edges{
+                                node{
+                                    id
+                                    sku
+                                    price
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
